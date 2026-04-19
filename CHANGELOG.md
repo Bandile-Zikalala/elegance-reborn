@@ -1,6 +1,8 @@
 # Changelog
 All notable changes to Elegance Reborn project.
 
+## 2026-04-19
+Updated index.html hero image size.
 ## 2026-04-18
 Updated product.html with product images, alt text, and descriptions
 Updated index.html and about.html structure and content
