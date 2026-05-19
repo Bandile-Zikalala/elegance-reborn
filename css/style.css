@@ -17,12 +17,33 @@ h1, h2, h3, h4 {
   font-weight: 600;
 }
 
+/* ===== IMAGES ===== */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.logo-img {
+  max-width: 120px;
+  margin: 20px auto;
+}
+
+.big-logo {
+  max-width: 400px;
+  margin: 20px auto;
+  opacity: 0.15;
+  position: relative;
+  z-index: -1;
+}
+
 /* ===== NAVIGATION ===== */
 nav {
   display: flex;
   gap: 15px;
   margin-bottom: 30px;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 nav a {
@@ -33,6 +54,7 @@ nav a {
   text-decoration: none;
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
+  flex-shrink: 0;
   transition: background 0.3s ease;
 }
 
@@ -43,9 +65,9 @@ nav a:hover {
 /* ===== HERO SECTION ===== */
 section:first-of-type img {
   width: 100%;
-  height: auto;
+  height: 350px;
+  object-fit: cover;
   border-radius: 8px;
-  display: block;
   margin-bottom: 20px;
 }
 
