@@ -1,0 +1,162 @@
+/* GOOGLE FONTS IMPORT - matches proposal */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Open+Sans:wght@400;500;600&display=swap');
+
+/* COLOURS FROM PROPOSAL */
+:root {
+  --beige: #f5f1eb;
+  --navy: #1a2332;
+  --charcoal: #2c2c2c;
+  --gold: #bfa76a;
+  --creamy-white: #faf8f5;
+}
+
+/* RESET + BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif; /* Proposal: sans-serif for body */
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--charcoal);
+  background: var(--creamy-white);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* TYPOGRAPHY - Proposal: Serif fonts for headings */
+h1, h2, h3 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--navy);
+}
+
+h1 { font-size: 2.2rem; letter-spacing: 3px; text-transform: uppercase; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.3rem; }
+
+p { margin-bottom: 1rem; }
+
+/* HEADER + NAV */
+header {
+  background: #fff;
+  padding: 1.5rem 2rem;
+  border-bottom: 2px solid var(--beige);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header h1 {
+  color: var(--gold); /* Gold accent from proposal */
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+nav p {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--charcoal);
+  font-weight: 500;
+  transition: color 0.3s ease;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+nav a:hover {
+  color: var(--gold);
+}
+
+/* MAIN LAYOUT */
+main, section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+/* HERO */
+section:first-of-type img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* BUTTONS - Gold accent */
+a[href="products.html"], a[href="about.html"] {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  background: var(--navy);
+  color: #fff;
+  text-decoration: none;
+  border: 2px solid var(--navy);
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+}
+
+a[href="products.html"]:hover, a[href="about.html"]:hover {
+  background: var(--gold);
+  border-color: var(--gold);
+  transform: translateY(-2px);
+}
+
+/* WHY CHOOSE US SECTION */
+article {
+  background: #fff;
+  padding: 2rem;
+  border-left: 4px solid var(--gold);
+  margin-top: 1.5rem;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: var(--navy);
+  color: var(--creamy-white);
+  margin-top: 3rem;
+  font-size: 0.9rem;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  h1 { font-size: 1.6rem; }
+  h2 { font-size: 1.5rem; }
+  
+  nav p {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+  
+  main, section {
+    padding: 2rem 1rem;
+  }
+  
+  section:first-of-type img {
+    height: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  body { font-size: 14px; }
+  header { padding: 1rem; }
+  h1 { font-size: 1.3rem; letter-spacing: 2px; }
+}
