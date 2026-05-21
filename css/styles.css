@@ -1,115 +1,186 @@
 /* Elegance Reborn - Main Stylesheet */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap');
 
-/* Base Styles */
+/* Base Styles - Strictly Serif */
 body {
-    font-family: 'Playfair Display', Georgia, serif;
-    background-color: #FAF8F5; /* Cream */
-    color: #2C2C2C; /* Charcoal */
+    font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+    background: linear-gradient(180deg, #FDF4F5 0%, #FDF4F5 60%, #FBEFF1 100%);
+    color: #2C2C2C;
     margin: 0;
     padding: 0;
-    line-height: 1.6;
+    line-height: 1.7;
+    letter-spacing: 0.2px;
 }
 
 /* Header & Navigation */
 header {
-    background-color: #1A1A40; /* Deep Navy */
-    border-bottom: 4px solid #C9A961; /* Gold */
-    padding: 20px 0;
+    background-color: #1A1A40;
+    border-bottom: 4px solid #D4A5A5;
+    padding: 35px 20px;
     text-align: center;
 }
 
 header h1 {
-    color: #C9A961; /* Gold */
-    font-size: 2.5rem;
+    color: #D4A5A5;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 3rem;
     margin: 0;
-    letter-spacing: 2px;
-    font-weight: 700;
+    letter-spacing: 4px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+header p {
+    color: #FAF8F5;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.2rem;
+    margin: 12px 0 0 0;
+    font-style: italic;
+    opacity: 0.9;
+}
+
+nav {
+    margin-top: 25px;
 }
 
 nav p {
-    margin: 15px 0 0 0;
+    margin: 0;
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 18px;
     flex-wrap: wrap;
 }
 
+/* Nav Buttons - White with Dusty Pink Border */
 nav a {
-    color: #FAF8F5; /* Cream */
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    color: #1A1A40;
+    background-color: #fff;
+    border: 2px solid #D4A5A5;
     text-decoration: none;
     font-size: 1.1rem;
-    font-weight: 500;
-    transition: color 0.3s ease;
+    font-weight: 600;
+    padding: 10px 26px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
 }
 
 nav a:hover {
-    color: #C9A961; /* Gold */
-    text-decoration: underline;
+    background-color: #D4A5A5;
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(212, 165, 165, 0.4);
 }
 
-/* Main Content */
+/* Main Content - Breathing Room */
 main {
-    max-width: 1200px;
+    max-width: 1100px;
     margin: 0 auto;
-    padding: 40px 20px;
+    padding: 70px 35px;
 }
 
 section {
-    margin-bottom: 40px;
+    margin-bottom: 90px;
+    background: #fff;
+    border-radius: 14px;
+    padding: 38px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+section:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+section:last-child {
+    margin-bottom: 0;
+}
+
+/* Hero section - editorial feel */
+main section:first-of-type {
+    text-align: center;
+}
+
+main section:first-of-type h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 2.8rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+    border: none;
+    margin-bottom: 25px;
+    color: #1A1A40;
+}
+
+main section:first-of-type h2::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 2px;
+    background-color: #C9A961;
+    margin: 18px auto 0;
+}
+
+/* Headings */
 h2 {
-    color: #1A1A40; /* Deep Navy */
-    font-size: 2rem;
-    border-bottom: 2px solid #C9A961; /* Gold */
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-    font-weight: 700;
+    font-family: 'Playfair Display', Georgia, serif;
+    color: #1A1A40;
+    font-size: 2.3rem;
+    border-bottom: 2px solid #D4A5A5;
+    padding-bottom: 14px;
+    margin-bottom: 35px;
+    font-weight: 600;
+    position: relative;
+}
+
+/* Gold accent line under h2 */
+h2::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 2px;
+    background-color: #C9A961;
+    margin: 14px 0 0 0;
 }
 
 h3 {
-    color: #1A1A40; /* Deep Navy */
-    font-size: 1.5rem;
-    margin-top: 30px;
-    font-weight: 700;
+    font-family: 'Playfair Display', Georgia, serif;
+    color: #1A1A40;
+    font-size: 1.7rem;
+    margin-top: 0;
+    font-weight: 600;
 }
 
 h4 {
-    color: #2C2C2C; /* Charcoal */
-    font-size: 1.2rem;
-    font-weight: 700;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    color: #2C2C2C;
+    font-size: 1.35rem;
+    font-weight: 600;
 }
 
 p {
-    font-size: 1rem;
-    line-height: 1.8;
-}
-
-/* Article Cards */
-article {
-    background-color: #fff;
-    border-left: 5px solid #C9A961; /* Gold */
-    padding: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
-    border-radius: 4px;
+    font-size: 1.08rem;
+    line-height: 1.9;
+    color: #2C2C2C;
+    margin-bottom: 0;
 }
 
 /* Forms */
 form {
     background-color: #fff;
-    padding: 30px;
-    border-radius: 4px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
-    max-width: 600px;
+    padding: 45px;
+    border-radius: 14px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    max-width: 620px;
+    margin: 0 auto;
 }
 
 label {
     display: block;
-    margin-bottom: 8px;
-    color: #1A1A40; /* Deep Navy */
-    font-weight: bold;
+    margin-bottom: 10px;
+    color: #1A1A40;
+    font-weight: 600;
+    font-size: 1.08rem;
 }
 
 input[type="text"],
@@ -117,48 +188,53 @@ input[type="email"],
 select,
 textarea {
     width: 100%;
-    padding: 12px;
-    margin-bottom: 18px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-family: 'Playfair Display', Georgia, serif;
-    font-size: 1rem;
+    padding: 14px 16px;
+    margin-bottom: 22px;
+    border: 1.5px solid #E0E0E0;
+    border-radius: 10px;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.05rem;
     box-sizing: border-box;
+    background-color: #FCF8F9;
+    transition: all 0.3s ease;
 }
 
 input:focus,
 select:focus,
 textarea:focus {
     outline: none;
-    border-color: #1A1A40;
-    box-shadow: 0 0 5px rgba(26, 26, 64, 0.3);
+    border-color: #D4A5A5;
+    box-shadow: 0 0 10px rgba(212, 165, 165, 0.25);
 }
 
 button {
-    background-color: #1A1A40; /* Deep Navy */
-    color: #C9A961; /* Gold */
-    padding: 12px 30px;
+    background-color: #D4A5A5;
+    color: #fff;
+    padding: 15px 38px;
     border: none;
-    border-radius: 4px;
-    font-size: 1rem;
+    border-radius: 30px;
+    font-size: 1.08rem;
     cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-family: 'Cormorant Garamond', Georgia, serif;
 }
 
 button:hover {
-    background-color: #2C2C5A; /* Lighter Navy */
+    background-color: #1A1A40;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(26, 26, 64, 0.25);
 }
 
 /* Links */
 a {
-    color: #1A1A40; /* Deep Navy */
+    color: #1A1A40;
     text-decoration: none;
+    transition: color 0.2s ease;
 }
 
 a:hover {
-    color: #D4A5A5; /* Dusty Pink */
+    color: #D4A5A5;
     text-decoration: underline;
 }
 
@@ -166,118 +242,126 @@ a:hover {
 .image-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 22px;
     justify-content: center;
 }
 
 .image-grid img {
-    flex: 0 1 200px;
-    width: 200px;
+    flex: 0 1 230px;
+    width: 230px;
     height: auto;
     object-fit: cover;
     display: block;
     margin: 10px 0;
-    border-radius: 4px;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.image-grid img:hover {
+    transform: scale(1.03);
 }
 
 /* Footer */
 footer {
-    background-color: #1A1A40; /* Deep Navy */
-    color: #FAF8F5; /* Cream */
+    background-color: #1A1A40;
+    color: #FAF8F5;
     text-align: center;
-    padding: 20px;
-    margin-top: 50px;
-    border-top: 4px solid #C9A961; /* Gold */
+    padding: 35px 20px;
+    margin-top: 90px;
+    border-top: 4px solid #D4A5A5;
 }
 
 footer hr {
     border: none;
     border-top: 1px solid #C9A961;
-    margin: 10px auto;
-    width: 50%;
+    margin: 18px auto;
+    width: 35%;
+}
+
+footer p {
+    color: #FAF8F5;
+    font-size: 0.95rem;
+    opacity: 0.85;
 }
 
 /* ===== RESPONSIVE DESIGN ===== */
-
-/* Tablet: 768px and below */
 @media (max-width: 768px) {
     header h1 {
-        font-size: 1.8rem;
+        font-size: 2.2rem;
+        letter-spacing: 2px;
     }
 
     nav p {
         flex-direction: column;
-        gap: 15px;
+        gap: 14px;
         align-items: center;
     }
 
+    nav a {
+        width: 240px;
+        text-align: center;
+    }
+
     main {
-        padding: 20px 15px;
+        padding: 50px 25px;
+    }
+
+    section {
+        margin-bottom: 70px;
+        padding: 30px;
     }
 
     h2 {
-        font-size: 1.5rem;
+        font-size: 1.9rem;
     }
 
     h3 {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
     }
 
     .image-grid img {
-        flex: 0 1 280px;
-        width: 280px;
-        margin: 10px auto;
+        flex: 0 1 320px;
+        width: 320px;
     }
 }
 
-/* Mobile: 480px and below */
 @media (max-width: 480px) {
     body {
-        font-size: 0.95rem;
+        font-size: 1rem;
     }
 
     header {
-        padding: 15px 10px;
+        padding: 25px 15px;
     }
 
     header h1 {
-        font-size: 1.5rem;
-        letter-spacing: 1px;
+        font-size: 1.8rem;
+        letter-spacing: 1.5px;
     }
 
     main {
-        padding: 15px 10px;
+        padding: 35px 18px;
     }
 
-    section, article {
-        padding: 15px;
+    section {
+        padding: 28px;
     }
 
     form {
-        padding: 20px;
-    }
-
-    input[type="text"],
-    input[type="email"],
-    select,
-    textarea,
-    button {
-        width: 100%;
-        box-sizing: border-box;
+        padding: 30px;
     }
 
     h2 {
-        font-size: 1.3rem;
+        font-size: 1.6rem;
     }
 
     .image-grid {
-        gap: 10px;
+        gap: 15px;
     }
     
     .image-grid img {
-        flex: 0 1 calc(50% - 5px);
-        width: calc(50% - 5px);
-        max-width: none;
+        flex: 0 1 calc(50% - 8px);
+        width: calc(50% - 8px);
         margin: 0;
     }
 }
