@@ -124,10 +124,10 @@ h4 {
 
 .product-card img {
     width: 100%;
-    height: 350px;
-    object-fit: cover;
+    height: auto; /* no cropping, keeps full image */
     border-radius: 10px;
     margin-bottom: 18px;
+    display: block;
 }
 
 .product-card h3 {
@@ -193,62 +193,24 @@ footer {
     border-top: 4px solid #D4A5A5;
 }
 
-@media (max-width: 768px) {
-    .products-grid { 
-        grid-template-columns: repeat(2, 1fr); /* 2 cards side by side */
-        gap: 16px; 
-    }
-    
-    .product-card {
-        padding: 15px;
-    }
-    
-    .product-card img {
-        width: 100%;
-        height: auto; /* keeps original image ratio, no cropping */
-        border-radius: 10px;
-        margin-bottom: 14px;
-    }
-    
-    .product-card h3 {
-        font-size: 1.1rem;
-        line-height: 1.3;
-        min-height: 2.6em; /* makes titles take 2 lines max so cards align */
-    }
-    
-    .product-card .price {
-        font-size: 1.1rem;
-    }
-    
-    .add-to-cart-btn {
-        font-size: 0.9rem;
-        padding: 10px 12px;
-    }
-    
-    main { padding: 50px 15px; }
-}
-
-/* TABLET + MOBILE: 2 columns */
+/* TABLET + MOBILE: 2 columns side by side */
 @media (max-width: 992px) {
     .products-grid { 
-        grid-template-columns: repeat(2, 1fr); /* Force 2 side by side */
-        gap: 20px; 
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 18px; 
     }
     
     .product-card {
         padding: 18px;
     }
     
-    .product-card img {
-        width: 100%;
-        height: auto; /* no crop, keeps full image */
-        border-radius: 10px;
-        margin-bottom: 14px;
-    }
-    
     .product-card h3 {
         font-size: 1.2rem;
         line-height: 1.3;
+    }
+    
+    .product-card .price {
+        font-size: 1.15rem;
     }
     
     .add-to-cart-btn {
@@ -257,16 +219,26 @@ footer {
     }
     
     main { padding: 60px 20px; }
+    
+    header h1 {
+        font-size: 2.4rem;
+        letter-spacing: 3px;
+    }
 }
 
-/* SMALL PHONES: back to 1 column */
+/* SMALL PHONES: 1 column only */
 @media (max-width: 480px) {
     .products-grid { 
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
         gap: 25px; 
     }
     
     .product-card h3 {
         font-size: 1.3rem;
+    }
+    
+    header h1 {
+        font-size: 2rem;
+        letter-spacing: 2px;
     }
 }
