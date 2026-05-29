@@ -85,7 +85,7 @@ section {
     width: 100%;
 }
 
-/* 2.5 Visual Styles */
+/* 2.5 Visual Styles + Flexbox for perfect alignment */
 .product-card {
     background: #fff;
     border-radius: 14px;
@@ -96,6 +96,9 @@ section {
     border: 1px solid #f0f0f0;
     width: 100%;
     overflow: hidden;
+    display: flex;              /* FIX: Flex container */
+    flex-direction: column;     /* FIX: Stack vertically */
+    height: 100%;               /* FIX: All cards same height */
 }
 .product-card:hover { transform: translateY(-6px); box-shadow: 0 10px 30px rgba(212, 165, 165, 0.2); }
 
@@ -108,18 +111,49 @@ section {
     display: block;
 }
 
+/* FIX: Title alignment - forces all titles to 2 lines height */
 .product-card h3 { 
     font-size: 1.5rem; 
     margin: 0 0 0.5rem 0; 
     color: #1A1A40; 
     word-wrap: break-word;
+    min-height: 3.2rem;         /* FIX: Same height for all titles */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-shrink: 0;
 }
-.product-card .price { font-size: 1.3rem; font-weight: 600; color: #D4A5A5; margin: 0 0 1.1rem 0; }
 
-.sizes { margin: 1.1rem 0; }
+/* FIX: Price alignment */
+.product-card .price { 
+    font-size: 1.3rem; 
+    font-weight: 600; 
+    color: #D4A5A5; 
+    margin: 0 0 1.1rem 0;
+    min-height: 1.8rem;         /* FIX: Same height for all prices */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+/* FIX: Sizes buttons alignment */
+.sizes { 
+    margin: 1.1rem 0;
+    min-height: 3.5rem;         /* FIX: Same height for all size sections */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    gap: 0.5rem;
+    flex-shrink: 0;
+}
 .sizes input[type="radio"] { display: none; }
 .sizes label {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     padding: 0.4rem 0.8rem;
     margin: 0.25rem;
     border: 2px solid #E0E0E0;
@@ -128,6 +162,7 @@ section {
     font-weight: 600;
     transition: all 0.2s ease;
     font-size: 0.9rem;
+    min-width: 45px;            /* FIX: All size boxes same width */
 }
 .sizes input[type="radio"]:checked + label {
     border-color: #D4A5A5;
@@ -135,7 +170,7 @@ section {
     color: #fff;
 }
 
-/* 2.5 Pseudo-classes for interactivity */
+/* 2.5 Pseudo-classes + Button alignment */
 .add-to-cart-btn {
     background-color: #1A1A40;
     color: #fff;
@@ -146,7 +181,7 @@ section {
     cursor: pointer;
     font-weight: 600;
     font-family: 'Cormorant Garamond', serif;
-    margin-top: 0.75rem;
+    margin-top: auto;           /* FIX: Pushes button to bottom */
     width: 100%;
     transition: all 0.3s ease;
 }
@@ -174,10 +209,29 @@ footer {
     }
     
     .product-card { padding: 0.75rem; }
-    .product-card h3 { font-size: 1rem; line-height: 1.2; }
-    .product-card .price { font-size: 1.05rem; }
-    .sizes label { padding: 0.3rem 0.5rem; font-size: 0.85rem; }
-    .add-to-cart-btn { font-size: 0.85rem; padding: 0.5rem 0.6rem; }
+    
+    /* Mobile fixes for alignment */
+    .product-card h3 { 
+        font-size: 1rem; 
+        line-height: 1.2; 
+        min-height: 2.6rem;       /* FIX: Same height on mobile */
+    }
+    .product-card .price { 
+        font-size: 1.05rem; 
+        min-height: 1.5rem; 
+    }
+    .sizes { 
+        min-height: 3rem; 
+    }
+    .sizes label { 
+        padding: 0.3rem 0.5rem; 
+        font-size: 0.85rem; 
+        min-width: 38px; 
+    }
+    .add-to-cart-btn { 
+        font-size: 0.85rem; 
+        padding: 0.5rem 0.6rem; 
+    }
     
     h1 { font-size: 2.4rem; letter-spacing: 3px; }
     h2 { font-size: 1.8rem; }
