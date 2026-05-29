@@ -28,12 +28,6 @@ FILES:
 * light-weight1.jpeg
 * light-weight2.jpeg
 * light-weight3.jpeg
-* maxi-dres1.jpg
-* maxi-dres2.jpg
-* maxi-dres3.jpg
-* midi-dress1.jpg
-* midi-dress2.jpg
-* midi-dress3.jpg
 * over-coat1.jpeg
 * over-coat2.jpeg
 * over-coat3.jpeg
