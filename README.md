@@ -81,3 +81,12 @@ No build tools or server needed — pure HTML and CSS.
 - HTML5 Semantic structure
 - CSS3 Grid + Flexbox + Media Queries
 - Google Fonts: Playfair Display, Cormorant Garamond
+
+## References
+All sources used during development of this project:
+
+1. **Google Fonts** - Playfair Display + Cormorant Garamond typefaces. https://fonts.google.com/
+2. **MDN Web Docs** - CSS Grid, Media Queries, and `srcset`/`sizes` syntax. https://developer.mozilla.org/en-US/docs/Web/CSS_grid_layout
+3. **W3Schools** - CSS `box-sizing: border-box` and responsive design tutorials. https://www.w3schools.com/css3_mediaqueries.asp
+4. **CSS-Tricks** - Guide to responsive images with `srcset` and `sizes`. https://css-tricks.com/responsive-images-youre-just-changing-resolutions-use-srcset/
+5. **Product Images** - All images are sourced from Shein Source: https://www.shein.com
