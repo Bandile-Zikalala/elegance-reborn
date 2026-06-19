@@ -34,6 +34,7 @@ header {
     padding: 2.2rem 1rem;
     text-align: center;
     width: 100%;
+    position: relative; /* only addition for search */
 }
 header h1 { color: #D4A5A5; text-transform: uppercase; }
 
@@ -76,12 +77,12 @@ section {
 }
 
 /* 2.4 Layout Structure - Grid per marking card 3.1 */
-    .products-grid {
+.products-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
-    grid-auto-flow: dense; /* fills holes */
-    grid-auto-rows: auto; /* collapses empty rows */
+    grid-auto-flow: dense;
+    grid-auto-rows: auto;
 }
 
 /* 2.5 Visual Styles + Flexbox for perfect alignment */
@@ -97,9 +98,6 @@ section {
     display: flex;
     flex-direction: column;
     height: 100%;
-    .product-card {
-    grid-column: span 1; /* never stretch full width */
-}
 }
 .product-card:hover { transform: translateY(-6px); box-shadow: 0 10px 30px rgba(212, 165, 165, 0.2); }
 
@@ -246,34 +244,6 @@ footer {
     body { font-size: 0.875rem; }
 }
 
-/* Search bar styling - matches Elegance Reborn colors */
-#searchBox {
-    width: 100%;
-    max-width: 400px;
-    padding: 14px 24px;
-    margin: 2rem auto;
-    display: block;
-    border: 2px solid #D4A5A5; /* blush border */
-    border-radius: 30px;
-    font-size: 1.1rem;
-    font-family: 'Cormorant Garamond', serif;
-    background: #fff;
-    color: #1A1A40; /* navy text */
-    box-shadow: 0 3px 10px rgba(212, 165, 165, 0.2);
-    transition: all 0.3s ease;
-}
-
-#searchBox::placeholder {
-    color: #D4A5A5; /* blush placeholder */
-    font-style: italic;
-}
-
-#searchBox:focus {
-    outline: none;
-    border-color: #1A1A40; /* navy border on focus */
-    box-shadow: 0 0 0 4px rgba(26, 26, 64, 0.1);
-}
-
 /* ENQUIRY FORM - Smaller + Dusty Pink Borders + White BG */
 main section form {
     max-width: 420px;
@@ -336,4 +306,88 @@ main section form button[type="submit"] {
 
 main section form button[type="submit"]:hover {
     background-color: #D4A5A5;
+}
+
+/* SEARCH - Top right corner, circle expands, button NEXT to it */
+header {
+  background-color: #1A1A40;
+  border-bottom: 4px solid #D4A5A5;
+  padding: 2.2rem 1rem;
+  text-align: center;
+  width: 100%;
+  position: relative; /* THIS IS THE FIX */
+}
+
+#globalSearch {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #D4A5A5;
+  background: white;
+  padding: 0;
+  transition: width 0.3s ease;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 16px;
+}
+
+#globalSearch:focus {
+  width: 180px;
+  border-radius: 20px;
+  padding: 0 15px;
+  text-align: left;
+  outline: none;
+  border-color: #1A1A40;
+}
+
+#searchBtn {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: #1A1A40;
+  color: #D4A5A5;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+#searchBtn:hover { background: #D4A5A5; color: #1A1A40; }
+
+header {
+  position: relative !important;
+}
+
+#searchToggle {
+  position: absolute !important;
+  top: 20px !important;
+  right: 80px !important;
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50% !important;
+  border: 1px solid #D4A5A5 !important;
+  background: white !important;
+  cursor: pointer !important;
+  font-size: 18px !important;
+  z-index: 9999 !important;
+}
+
+#searchInput {
+  position: absolute !important;
+  top: 20px !important;
+  right: 80px !important;
+  width: 0 !important;
+  height: 40px !important;
+  padding: 0 !important;
+  border: 1px solid #D4A5A5 !important;
+  border-radius: 20px !important;
+  opacity: 0 !important;
+  transition: all 0.3s !important;
+  z-index: 9998 !important;
+}
+
+#searchInput.active {
+  width: 200px !important;
+  padding: 0 15px !important;
+  opacity: 1 !important;
+  right: 130px !important;
 }

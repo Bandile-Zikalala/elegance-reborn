@@ -16,22 +16,24 @@
 </head>
 
 <body>
-    <header>
-        <nav>
-            <div>
-                <h1>ELEGANCE REBORN</h1>
-            <p> 
-                <a href="index.html">Home</a>
-                <a href="about.html">About Us</a>
-                <a href="products.html">Products</a>
-                <a href="enquiry.html">Enquiry</a>
-                <a href="contact.html">Contact Us</a>
-                <a href="cart.html">Cart (<span id="cartCount">0</span>)</a>
-            </p>
-            </div>
-        </nav>
-    </header>
+   <header>
+  <h1>ELEGANCE REBORN</h1>
+  
+  <nav>
+    <p> 
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="products.html">Products</a>
+      <a href="enquiry.html">Enquiry</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="cart.html">Cart (<span id="cartCount">0</span>)</a>
+    </p>
+  </nav>
+   <button type="button" id="searchToggle">🔍</button>
+        <input type="text" id="searchInput" placeholder="Search...">
+</header>
     
+
     <main>
         <section>
             <h2>Product & Service Enquiry</h2>
@@ -98,5 +100,6 @@ function updateCartCount() {
 }
 updateCartCount();
 </script>
+<script src="js/script.js"></script>
 </body>
 </html>
