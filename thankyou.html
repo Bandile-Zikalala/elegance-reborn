@@ -3,28 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thank You - Elegance Reborn</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="description" content="Elegance Reborn - Curated modest clothing, blazers, overcoats, suits and bags. Quality fabrics with classic designs in South Africa.">
+    <meta name="keywords" content="modest clothing, blazers, overcoats, suits, tote bags, South Africa fashion">
+    <title>Order Placed - Elegance Reborn</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Cormorant+Garamond:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header>
         <nav>
             <h1>ELEGANCE REBORN</h1>
-            <p><a href="index.html">Home</a> <a href="products.html">Products</a></p>
+            <p>
+                <a href="index.html">Home</a> 
+                <a href="products.html">Products</a>
+                <a href="cart.html">Cart (<span id="cartCount">0</span>)</a>
+            </p>
         </nav>
     </header>
     
-    <main style="text-align:center; padding:4rem 2rem;">
-        <h2 style="color:#1A1A40; font-size:2.5rem;">Thank You! 💌</h2>
-        <p style="font-size:1.3rem; color:#333; max-width:600px; margin:2rem auto;">
-            Thank you for your enquiry! We’ve received your message and our team will get back to you within 24 hours.
-            <br><br>
-            <em>Elegance Reborn - where timeless style meets modern confidence.</em>
-        </p>
-        <a href="products.html" class="add-to-cart-btn">Continue Shopping</a>
+    <main style="text-align:center; padding:5rem 2rem;">
+        <div style="max-width:600px; margin:0 auto; background:white; padding:4rem 2rem; border-radius:20px; border:3px solid #D4A5A5; box-shadow:0 10px 30px rgba(0,0,0,0.1);">
+            <h2 style="color:#1A1A40; font-size:3rem; margin-bottom:1rem;">✅ Order Placed!</h2>
+            <p style="font-size:1.3rem; color:#333; margin-bottom:1.5rem;">
+                Thank you for shopping with Elegance Reborn! 🙏
+            </p>
+            <p style="font-size:1.1rem; color:#666; max-width:500px; margin:0 auto 3rem auto; line-height:1.6;">
+                We’ve received your order. Our team will WhatsApp/Email you within 24 hours to confirm payment & delivery details.
+                <br><br>
+                <em style="color:#D4A5A5;">Elegance Reborn - where timeless style meets modern confidence.</em>
+            </p>
+            <a href="products.html" class="add-to-cart-btn" style="background:#1A1A40; color:white; font-size:1.2rem; padding:1rem 2rem; display:inline-block; text-decoration:none; border-radius:25px;">
+                Continue Shopping
+            </a>
+        </div>
     </main>
     
     <footer><p>&copy; 2026 Elegance Reborn. All rights reserved</p></footer>
+
+<script>
+// Show cart count + clear cart after order
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
+document.getElementById('cartCount').textContent = cart.length;
+
+// IMPORTANT: Clear cart so it's empty next time customer shops
+localStorage.removeItem('cart');
+</script>
 </body>
 </html>

@@ -1,6 +1,17 @@
 # Changelog
 All notable changes to Elegance Reborn project.
 
+## Changelog - Part 3
+### 2026-06-19
+- **JavaScript Cart**: Implemented full cart system with localStorage, add/remove items, quantity update, total calculation
+- **Interactive Elements**: Added "✅ Added!" button animation on products page for user feedback
+- **Search Functionality**: Added live product search/filter on products.html using JavaScript DOM manipulation
+- **SEO On-Page**: Added unique meta descriptions + keywords to all HTML pages, proper alt text for all 27 product images
+- **SEO Files**: Created robots.txt and sitemap.xml for search engine indexing
+- **Form Validation**: Added JavaScript validation for enquiry.html and contact.html forms with error messages
+- **Lightbox Gallery**: Added click-to-enlarge product image feature using vanilla JavaScript modal
+- **Deployment**: Pushed updates to GitHub repository and deployed site on Netlify
+
 ## 2026-06-18 - Git/GitHub Sync + Project Cleanup
 ### Fixed: Git workflow
 - Resolved merge conflict when pulling README.md from GitHub

@@ -78,3 +78,4 @@ No build tools or server needed — pure HTML and CSS.
 3. **W3Schools** - CSS `box-sizing` and responsive design. https://www.w3schools.com/
 4. **CSS-Tricks** - Guide to responsive images. https://css-tricks.com/
 5. **Product Images** - Sourced from Shein. https://www.shein.com
+
