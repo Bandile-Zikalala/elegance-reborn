@@ -17,7 +17,7 @@
                 <a href="products.html">Products</a>
                 <a href="enquiry.html">Enquiry</a>
                 <a href="contact.html">Contact Us</a>
-                <a href="cart.html">Cart (<span id="cartCount">0</span>)</a>
+                <a href="#" id="cartLink">Cart (<span id="cartCount">0</span>)</a>
             </p>
         </nav>
     </header>
@@ -406,7 +406,7 @@
                   <input type="radio" id="p25-xs" name="p25" value="XS" required><label for="p25-xs">XS</label>
                   <input type="radio" id="p25-s" name="p25" value="S"><label for="p25-s">S</label>
                   <input type="radio" id="p25-m" name="p25" value="M"><label for="p25-m">M</label>
-                  <input type="radio" id="p25-l" name="p25" value="L"><label for="p25-l">L</label>
+                  <input type="radio" id="p25-l" name="p25-l" value="L"><label for="p25-l">L</label>
                   <input type="radio" id="p25-xl" name="p25" value="XL"><label for="p25-xl">XL</label>
                 </div>
                 <button class="add-to-cart-btn" data-name="Golden Shoulder Bag" data-price="159.99">Add to Cart</button>
@@ -440,82 +440,4 @@
                 <button class="add-to-cart-btn" data-name="Chain Shoulder Bag" data-price="159.99">Add to Cart</button>
               </div>
             </div>
-        </section>
-    </main>
-
-    <footer>
-        <p>© 2026 Elegance Reborn. All rights reserved.</p>
-    </footer>
-
-<script>
-function updateCartCount() {
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    const countEl = document.getElementById('cartCount');
-    if (countEl) countEl.textContent = cart.length;
-}
-
-// Run this as soon as page loads
-updateCartCount();
-
-document.querySelectorAll('.add-to-cart-btn').forEach(button => {
-    button.addEventListener('click', function() {
-        const card = this.closest('.product-card');
-        const name = this.dataset.name;
-        const price = parseFloat(this.dataset.price);
-        
-        const selectedSize = card.querySelector('input[type="radio"]:checked');
-        
-        if (!selectedSize) {
-            alert('⚠️ Please select a size first: XS, S, M, L, or XL');
-            return;
-        }
-        
-        const size = selectedSize.value;
-        
-        // Get fresh cart, add item, save
-        let cart = JSON.parse(localStorage.getItem('cart')) || [];
-        cart.push({name, price, size});
-        localStorage.setItem('cart', JSON.stringify(cart));
-        
-        // Update the number RIGHT NOW
-        updateCartCount();
-        
-        alert('✅ Item added to cart!\n' + name + '\nSize: ' + size + '\nR' + price.toFixed(2));
-    });
-});
-
-// Your search code
-const searchInput = document.getElementById('searchBox');
-if (searchInput) {
-    searchInput.addEventListener('input', function() {
-        const searchTerm = this.value.toLowerCase().trim();
-        const grids = document.querySelectorAll('.products-grid');
-        
-        grids.forEach(function(grid) {
-            const cards = grid.querySelectorAll('.product-card');
-            let visibleCount = 0;
-            
-            cards.forEach(function(card) {
-                const productName = card.dataset.name.toLowerCase();
-                if (searchTerm === '' || productName.includes(searchTerm)) {
-                    card.style.display = 'flex';
-                    visibleCount++;
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-            
-            const heading = grid.previousElementSibling;
-            if (visibleCount === 0 && searchTerm !== '') {
-                grid.style.display = 'none';
-                if (heading && heading.tagName === 'H4') heading.style.display = 'none';
-            } else {
-                grid.style.display = 'grid';
-                if (heading && heading.tagName === 'H4') heading.style.display = 'block';
-            }
-        });
-    });
-}
-</script>
-</body>
-</html>
+       

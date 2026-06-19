@@ -252,24 +252,24 @@ footer {
     padding: 14px 24px;
     margin: 2rem auto;
     display: block;
-    border: 2px solid #D4A5A5;
+    border: 2px solid #D4A5A5; /* blush border */
     border-radius: 30px;
     font-size: 1.1rem;
     font-family: 'Cormorant Garamond', serif;
     background: #fff;
-    color: #1A1A40;
+    color: #1A1A40; /* navy text */
     box-shadow: 0 3px 10px rgba(212, 165, 165, 0.2);
     transition: all 0.3s ease;
 }
 
 #searchBox::placeholder {
-    color: #D4A5A5;
+    color: #D4A5A5; /* blush placeholder */
     font-style: italic;
 }
 
 #searchBox:focus {
     outline: none;
-    border-color: #1A1A40;
+    border-color: #1A1A40; /* navy border on focus */
     box-shadow: 0 0 0 4px rgba(26, 26, 64, 0.1);
 }
 
