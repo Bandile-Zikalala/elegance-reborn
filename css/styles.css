@@ -96,9 +96,9 @@ section {
     border: 1px solid #f0f0f0;
     width: 100%;
     overflow: hidden;
-    display: flex;              /* FIX: Flex container */
-    flex-direction: column;     /* FIX: Stack vertically */
-    height: 100%;               /* FIX: All cards same height */
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 .product-card:hover { transform: translateY(-6px); box-shadow: 0 10px 30px rgba(212, 165, 165, 0.2); }
 
@@ -117,7 +117,7 @@ section {
     margin: 0 0 0.5rem 0; 
     color: #1A1A40; 
     word-wrap: break-word;
-    min-height: 3.2rem;         /* FIX: Same height for all titles */
+    min-height: 3.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -131,7 +131,7 @@ section {
     font-weight: 600; 
     color: #D4A5A5; 
     margin: 0 0 1.1rem 0;
-    min-height: 1.8rem;         /* FIX: Same height for all prices */
+    min-height: 1.8rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -141,7 +141,7 @@ section {
 /* FIX: Sizes buttons alignment */
 .sizes { 
     margin: 1.1rem 0;
-    min-height: 3.5rem;         /* FIX: Same height for all size sections */
+    min-height: 3.5rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -162,7 +162,7 @@ section {
     font-weight: 600;
     transition: all 0.2s ease;
     font-size: 0.9rem;
-    min-width: 45px;            /* FIX: All size boxes same width */
+    min-width: 45px;
 }
 .sizes input[type="radio"]:checked + label {
     border-color: #D4A5A5;
@@ -181,7 +181,7 @@ section {
     cursor: pointer;
     font-weight: 600;
     font-family: 'Cormorant Garamond', serif;
-    margin-top: auto;           /* FIX: Pushes button to bottom */
+    margin-top: auto;
     width: 100%;
     transition: all 0.3s ease;
 }
@@ -204,17 +204,16 @@ footer {
     section { padding: 1.5rem 0.75rem; }
     
     .products-grid { 
-        grid-template-columns: 1fr 1fr; /* 2 columns for iPad + iPhone 12 Pro 390px */
+        grid-template-columns: 1fr 1fr;
         gap: 0.75rem;
     }
     
     .product-card { padding: 0.75rem; }
     
-    /* Mobile fixes for alignment */
     .product-card h3 { 
         font-size: 1rem; 
         line-height: 1.2; 
-        min-height: 2.6rem;       /* FIX: Same height on mobile */
+        min-height: 2.6rem;
     }
     .product-card .price { 
         font-size: 1.05rem; 
@@ -244,8 +243,8 @@ footer {
     }
     nav p { flex-direction: column; gap: 0.6rem; }
     body { font-size: 0.875rem; }
-<<<<<<< HEAD
 }
+
 /* Search bar styling - matches Elegance Reborn colors */
 #searchBox {
     width: 100%;
@@ -253,25 +252,87 @@ footer {
     padding: 14px 24px;
     margin: 2rem auto;
     display: block;
-    border: 2px solid #D4A5A5; /* blush border */
+    border: 2px solid #D4A5A5;
     border-radius: 30px;
     font-size: 1.1rem;
     font-family: 'Cormorant Garamond', serif;
     background: #fff;
-    color: #1A1A40; /* navy text */
+    color: #1A1A40;
     box-shadow: 0 3px 10px rgba(212, 165, 165, 0.2);
     transition: all 0.3s ease;
 }
 
 #searchBox::placeholder {
-    color: #D4A5A5; /* blush placeholder */
+    color: #D4A5A5;
     font-style: italic;
 }
 
 #searchBox:focus {
     outline: none;
-    border-color: #1A1A40; /* navy border on focus */
+    border-color: #1A1A40;
     box-shadow: 0 0 0 4px rgba(26, 26, 64, 0.1);
-=======
->>>>>>> 7eeeaa99f2bd178731b394bf1828fa624d448e80
+}
+
+/* ENQUIRY FORM - Smaller + Dusty Pink Borders + White BG */
+main section form {
+    max-width: 420px;
+    margin: 30px auto;
+    padding: 20px;
+    border: 2px solid #D4A5A5;
+    border-radius: 10px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+main section form label {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #1A1A40;
+    margin-top: 8px;
+}
+
+main section form input[type="text"],
+main section form input[type="email"],
+main section form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1.5px solid #D4A5A5;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-family: 'Cormorant Garamond', serif;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    color: #2C2C2C;
+}
+
+main section form input:focus,
+main section form textarea:focus {
+    outline: none;
+    border-color: #1A1A40;
+}
+
+main section form textarea {
+    min-height: 90px;
+    resize: vertical;
+}
+
+main section form button[type="submit"] {
+    margin-top: 15px;
+    padding: 12px;
+    background-color: #1A1A40;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1rem;
+    font-family: 'Cormorant Garamond', serif;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+main section form button[type="submit"]:hover {
+    background-color: #D4A5A5;
 }

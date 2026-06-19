@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -407,7 +406,7 @@
                   <input type="radio" id="p25-xs" name="p25" value="XS" required><label for="p25-xs">XS</label>
                   <input type="radio" id="p25-s" name="p25" value="S"><label for="p25-s">S</label>
                   <input type="radio" id="p25-m" name="p25" value="M"><label for="p25-m">M</label>
-                  <input type="radio" id="p25-l" name="p25-l" value="L"><label for="p25-l">L</label>
+                  <input type="radio" id="p25-l" name="p25" value="L"><label for="p25-l">L</label>
                   <input type="radio" id="p25-xl" name="p25" value="XL"><label for="p25-xl">XL</label>
                 </div>
                 <button class="add-to-cart-btn" data-name="Golden Shoulder Bag" data-price="159.99">Add to Cart</button>
@@ -440,12 +439,12 @@
                 </div>
                 <button class="add-to-cart-btn" data-name="Chain Shoulder Bag" data-price="159.99">Add to Cart</button>
               </div>
-       
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>© 2025 Elegance Reborn. All rights reserved.</p>
+        <p>© 2026 Elegance Reborn. All rights reserved.</p>
     </footer>
 
 <script>
@@ -481,502 +480,42 @@ document.querySelectorAll('.add-to-cart-btn').forEach(button => {
         // Update the number RIGHT NOW
         updateCartCount();
         
-        alert('✅ Added to cart!\n' + name + '\nSize: ' + size + '\nR' + price.toFixed(2));
+        alert('✅ Item added to cart!\n' + name + '\nSize: ' + size + '\nR' + price.toFixed(2));
     });
 });
 
-// Your search code stays here unchanged...
+// Your search code
 const searchInput = document.getElementById('searchBox');
-searchInput.addEventListener('input', function() {
-    const searchTerm = this.value.toLowerCase().trim();
-    const grids = document.querySelectorAll('.products-grid');
-    
-    grids.forEach(function(grid) {
-        const cards = grid.querySelectorAll('.product-card');
-        let visibleCount = 0;
+if (searchInput) {
+    searchInput.addEventListener('input', function() {
+        const searchTerm = this.value.toLowerCase().trim();
+        const grids = document.querySelectorAll('.products-grid');
         
-        cards.forEach(function(card) {
-            const productName = card.dataset.name.toLowerCase();
-            if (searchTerm === '' || productName.includes(searchTerm)) {
-                card.style.display = 'flex';
-                visibleCount++;
+        grids.forEach(function(grid) {
+            const cards = grid.querySelectorAll('.product-card');
+            let visibleCount = 0;
+            
+            cards.forEach(function(card) {
+                const productName = card.dataset.name.toLowerCase();
+                if (searchTerm === '' || productName.includes(searchTerm)) {
+                    card.style.display = 'flex';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+            
+            const heading = grid.previousElementSibling;
+            if (visibleCount === 0 && searchTerm !== '') {
+                grid.style.display = 'none';
+                if (heading && heading.tagName === 'H4') heading.style.display = 'none';
             } else {
-                card.style.display = 'none';
+                grid.style.display = 'grid';
+                if (heading && heading.tagName === 'H4') heading.style.display = 'block';
             }
         });
-        
-        const heading = grid.previousElementSibling;
-        if (visibleCount === 0 && searchTerm !== '') {
-            grid.style.display = 'none';
-            if (heading && heading.tagName === 'H4') heading.style.display = 'none';
-        } else {
-            grid.style.display = 'grid';
-            if (heading && heading.tagName === 'H4') heading.style.display = 'block';
-        }
     });
-});
+}
 </script>
 </body>
-=======
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products - Elegance Reborn</title>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-    <header>
-        <nav>
-            <h1>ELEGANCE REBORN</h1>
-            <p> 
-                <a href="index.html">Home</a>
-                <a href="about.html">About Us</a>
-                <a href="products.html">Products</a>
-                <a href="enquiry.html">Enquiry</a>
-                <a href="contact.html">Contact Us</a>
-            </p>
-        </nav>
-    </header>
-
-    <main>
-        <section>
-            <h2>Our Collections</h2>
-            <p>Curated modest clothing crafted from quality fabrics with classic designs and refined detail.</p>
-        </section>
-
-            
-            <h3>Outerwear</h3>
-            
-            <h4>Blazers</h4>
-            <div class="products-grid">
-              <div class="product-card">
-                <img src="images/blazer1.jpeg" 
-                     srcset="images/blazer1.jpeg 800w" 
-                     sizes="(max-width: 389px) 100vw, (max-width: 992px) 50vw, 33vw"
-                     alt="Black Tailored Blazer">
-                <h3>Black Tailored Blazer</h3>
-                <p class="price">R450.00</p>
-                <div class="sizes">
-                  <input type="radio" id="b1-s" name="blazer1"><label for="b1-s">S</label>
-                  <input type="radio" id="b1-m" name="blazer1"><label for="b1-m">M</label>
-                  <input type="radio" id="b1-l" name="blazer1"><label for="b1-l">L</label>
-                  <input type="radio" id="b1-xl" name="blazer1"><label for="b1-xl">XL</label>
-                </div>
-                <button class="add-to-cart-btn">Add to Cart</button>
-              </div>
-              <div class="product-card">
-                <img src="images/blazer3.jpeg" 
-                     srcset="images/blazer3.jpeg 800w" 
-                     sizes="(max-width: 389px) 100vw, (max-width: 992px) 50vw, 33vw"
-                     alt="Scotch Check Blazer">
-                <h3>Scotch Check Blazer</h3>
-                <p class="price">R450.00</p>
-                <div class="sizes">
-                  <input type="radio" id="b2-s" name="blazer2"><label for="b2-s">S</label>
-                  <input type="radio" id="b2-m" name="blazer2"><label for="b2-m">M</label>
-                  <input type="radio" id="b2-l" name="blazer2"><label for="b2-l">L</label>
-                  <input type="radio" id="b2-xl" name="blazer2"><label for="b2-xl">XL</label>
-                </div>
-                <button class="add-to-cart-btn">Add to Cart</button>
-              </div>
-              <div class="product-card">
-                <img src="images/blazer4.jpeg" 
-                     srcset="images/blazer4.jpeg 800w" 
-                     sizes="(max-width: 389px) 100vw, (max-width: 992px) 50vw, 33vw"
-                     alt="Grey Scotch Blazer">
-                <h3>Grey Scotch Blazer</h3>
-                <p class="price">R450.00</p>
-                <div class="sizes">
-                  <input type="radio" id="b3-s" name="blazer3"><label for="b3-s">S</label>
-                  <input type="radio" id="b3-m" name="blazer3"><label for="b3-m">M</label>
-                  <input type="radio" id="b3-l" name="blazer3"><label for="b3-l">L</label>
-                  <input type="radio" id="b3-xl" name="blazer3"><label for="b3-xl">XL</label>
-                </div>
-                <button class="add-to-cart-btn">Add to Cart</button>
-              </div>
-            </div>
-
-            <h4>Overcoats</h4>
-            <div class="products-grid">
-              <div class="product-card">
-                <img src="images/over-coat1.jpeg" 
-                     srcset="images/over-coat1.jpeg 800w" 
-                     sizes="(max-width: 389px) 100vw, (max-width: 992px) 50vw, 33vw"
-                     alt="Wool Overcoat">
-                <h3>Black Fur</h3>
-                <p class="price">R450.00</p>
-                <div class="sizes">
-                  <input type="radio" id="oc1-s" name="oc1"><label for="oc1-s">S</label>
-                  <input type="radio" id="oc1-m" name="oc1"><label for="oc1-m">M</label>
-                  <input type="radio" id="oc1-l" name="oc1"><label for="oc1-l">L</label>
-                  <input type="radio" id="oc1-xl" name="oc1"><label for="oc1-xl">XL</label>
-                </div>
-                <button class="add-to-cart-btn">Add to Cart</button>
-              </div>
-              <div class="product-card">
-                <img src="images/over-coat2.jpeg" 
-                     srcset="images/over-coat2.jpeg 800w" 
-                     sizes="(max-width: 389px) 100vw, (max-width: 992px) 50vw, 33vw"
-                     alt="Camel Overcoat">
-                <h3>Light Blue</h3>
-                <p class="price">R450.00</p>
-                <div class="sizes">
-                  <input type="radio" id="oc2-s" name="oc2"><label for="oc2-s">S</label>
-                  <input type="radio" id="oc2-m" name="oc2"><label for="oc2-m">M</label>
-                  <input type="radio" id="oc2-l" name="oc2"><label for="oc2-l">L</label>
-                  <input type="radio" id="oc2-xl" name="oc2"><label for="oc2-xl">XL</label>
-                </div>
-                <button class="add-to-cart-btn">Add to Cart</button>
-              </div>
-              <div class="product-card">
-                <img src="images/over-coat3.jpeg" 
-                     srcset="images/over-coat3.jpeg 800w" 
-                     sizes="(max-width: 389px) 100vw, (max-width: 992px) 50vw, 33vw"
-                     alt="Long Overcoat">
-                <h3>Apricot</h3>
-                <p class="price">R450.00</p>
-                <div class="sizes">
-                  <input type="radio" id="oc3-s" name="oc3"><label for="oc3-s">S</label>
-                  <input type="radio" id="oc3-m" name="oc3"><label for="oc3-m">M</label>
-                  <input type="radio" id="oc3-l" name="oc3"><label for="oc3-l">L</label>
-                  <input type="radio" id="oc3-xl" name="oc3"><label for="oc3-xl">XL</label>
-                </div>
-                <button class="add-to-cart-btn">Add to Cart</button>
-              </div>
-            </div>
-
-            <h4>Trench Coats</h4>
-            <div class="products-grid">
-              <div class="product-card">
-                <img src="images/trench-coat1.jpeg" 
-                     srcset="images/trench-coat1.jpeg 800w" 
-                     sizes="(max-width: 389px) 100vw, (max-width: 992px) 50vw, 33vw"
-                     alt="Classic Trench Coat">
-                <h3>Classic Trench Coat</h3>
-                <p class="price">R450.00</p>
-                <div class="sizes">
-                  <input type="radio" id="tc1-s" name="tc1"><label for="tc1-s">S</label>
-                  <input type="radio" id="tc1-m" name="tc1"><label for="tc1-m">M</label>
-                  <input type="radio" id="tc1-l" name="tc1"><label for="tc1-l">L</label>
-                  <input type="radio" id="tc1-xl" name="tc1"><label for="tc1-xl">XL</label>
-                </div>
-                <button class="add-to-cart-btn">Add to Cart</button>
-              </div>
-              <div class="product-card">
-                <img src="images/trench-coat3.jpeg" 
-                     srcset="images/trench-coat3.jpeg 800w" 
-                     sizes="(max-width: 389px) 100vw, (max-width: 992px) 50vw, 33vw"
-                     alt="Beige Trench Coat">
-                <h3>Grey Trench Coat</h3>
-                <p class="price">R450.00</p>
-                <div class="sizes">
-                  <input type="radio" id="tc2-s" name="tc2"><label for="tc2-s">S</label>
-                  <input type="radio" id="tc2-m" name="tc2"><label for="tc2-m">M</label>
-                  <input type="radio" id="tc2-l" name="tc2"><label for="tc2-l">L</label>
-                  <input type="radio" id="tc2-xl" name="tc2"><label for="tc2-xl">XL</label>
-                </div>
-                <button class="add-to-cart-btn">Add to Cart</button>
-              </div>
-              <div class="product-card">
-                <img src="images/trench-coat2.jpeg" 
-                     srcset="images/trench-coat2.jpeg 800w" 
-                     sizes="(max-width: 389px) 100vw, (max-width: 992px) 50vw, 33vw"
-                     alt="Double Breasted Trench">
-                <h3>Double Breasted</h3>
-                <p class="price">R450.00</p>
-                <div class="sizes">
-                  <input type="radio" id="tc3-s" name="tc3"><label for="tc3-s">S</label>
-                  <input type="radio" id="tc3-m" name="tc3"><label for="tc3-m">M</label>
-                  <input type="radio" id="tc3-l" name="tc3"><label for="tc3-l">L</label>
-                  <input type="radio" id="tc3-xl" name="tc3"><label for="tc3-xl">XL</label>
-                </div>
-                <button class="add-to-cart-btn">Add to Cart</button>
-              </div>
-            </div>
-
-            <h3>Suits</h3>
-            
-            <h4>Lightweight Blazers</h4>
-            <div class="products-grid">
-              <div class="product-card">
-                <img src="images/light-weight1.jpeg" 
-                     srcset="images/light-weight1.jpeg 800w" 
-                     sizes="(max-width: 389px) 100vw, (max-width: 992px) 50vw, 33vw"
-                     alt="Linen Blazer">
-                <h3>Linen Blazer</h3>
-                <p class="price">R159.99</p>
-                <div class="sizes">
-                  <input type="radio" id="lw1-s" name="lw1"><label for="lw1-s">S</label>
-                  <input type="radio" id="lw1-m" name="lw1"><label for="lw1-m">M</label>
-                  <input type="radio" id="lw1-l" name="lw1"><label for="lw1-l">L</label>
-                  <input type="radio" id="lw1-xl" name="lw1"><label for="lw1-xl">XL</label>
-                </div>
-                <button class="add-to-cart-btn">Add to Cart</button>
-              </div>
-              <div class="product-card">
-                <img src="images/light-weight2.jpeg" 
-                     srcset="images/light-weight2.jpeg 800w" 
-                     sizes="(max-width: 389px) 100vw, (max-width: 992px) 50vw, 33vw"
-                     alt="Summer Blazer">
-                <h3>Summer Blazer</h3>
-                <p class="price">R159.99</p>
-                <div class="sizes">
-                  <input type="radio" id="lw2-s" name="lw2"><label for="lw2-s">S</label>
-                  <input type="radio" id="lw2-m" name="lw2"><label for="lw2-m">M</label>
-                  <input type="radio" id="lw2-l" name="lw2"><label for="lw2-l">L</label>
-                  <input type="radio" id="lw2-xl" name="lw2"><label for="lw2-xl">XL</label>
-                </div>
-                <button class="add-to-cart-btn">Add to Cart</button>
-              </div>
-              <div class="product-card">
-                <img src="images/light-weight3.jpeg" 
-                     srcset="images/light-weight3.jpeg 800w" 
-                     sizes="(max-width: 389px) 100vw, (max-width: 992px) 50vw, 33vw"
-                     alt="Breathable Blazer">
-                <h3>Breathable Blazer</h3>
-                <p class="price">R159.99</p>
-                <div class="sizes">
-                  <input type="radio" id="lw3-s" name="lw3"><label for="lw3-s">S</label>
-                  <input type="radio" id="lw3-m" name="lw3"><label for="lw3-m">M</label>
-                  <input type="radio" id="lw3-l" name="lw3"><label for="lw3-l">L</label>
-                  <input type="radio" id="lw3-xl" name="lw3"><label for="lw3-xl">XL</label>
-                </div>
-                <button class="add-to-cart-btn">Add to Cart</button>
-              </div>
-            </div>
-
-            <h4>Suit Sets</h4>
-            <div class="products-grid">
-              <div class="product-card">
-                <img src="images/suit1.jpeg" 
-                     srcset="images/suit1.jpeg 800w" 
-                     sizes="(max-width: 389px) 100vw, (max-width: 992px) 50vw, 33vw"
-                     alt="Navy Suit Set">
-                <h3>Burgandy Suit Set</h3>
-                <p class="price">R499.99</p>
-                <div class="sizes">
-                  <input type="radio" id="ss1-s" name="ss1"><label for="ss1-s">S</label>
-                  <input type="radio" id="ss1-m" name="ss1"><label for="ss1-m">M</label>
-                  <input type="radio" id="ss1-l" name="ss1"><label for="ss1-l">L</label>
-                  <input type="radio" id="ss1-xl" name="ss1"><label for="ss1-xl">XL</label>
-                </div>
-                <button class="add-to-cart-btn">Add to Cart</button>
-              </div>
-              <div class="product-card">
-                <img src="images/suit2.jpeg" 
-                     srcset="images/suit2.jpeg 800w" 
-                     sizes="(max-width: 389px) 100vw, (max-width: 992px) 50vw, 33vw"
-                     alt="Grey Suit Set">
-                <h3>Scotch Suit Set</h3>
-                <p class="price">R499.99</p>
-                <div class="sizes">
-                  <input type="radio" id="ss2-s" name="ss2"><label for="ss2-s">S</label>
-                  <input type="radio" id="ss2-m" name="ss2"><label for="ss2-m">M</label>
-                  <input type="radio" id="ss2-l" name="ss2"><label for="ss2-l">L</label>
-                  <input type="radio" id="ss2-xl" name="ss2"><label for="ss2-xl">XL</label>
-                </div>
-                <button class="add-to-cart-btn">Add to Cart</button>
-              </div>
-              <div class="product-card">
-                <img src="images/suit3.jpeg" 
-                     srcset="images/suit3.jpeg 800w" 
-                     sizes="(max-width: 389px) 100vw, (max-width: 992px) 50vw, 33vw"
-                     alt="Black Suit Set">
-                <h3>Beige Suit Set</h3>
-                <p class="price">R499.99</p>
-                <div class="sizes">
-                  <input type="radio" id="ss3-s" name="ss3"><label for="ss3-s">S</label>
-                  <input type="radio" id="ss3-m" name="ss3"><label for="ss3-m">M</label>
-                  <input type="radio" id="ss3-l" name="ss3"><label for="ss3-l">L</label>
-                  <input type="radio" id="ss3-xl" name="ss3"><label for="ss3-xl">XL</label>
-                </div>
-                <button class="add-to-cart-btn">Add to Cart</button>
-              </div>
-            </div>
-
-            <h4>Suit Pants</h4>
-            <div class="products-grid">
-              <div class="product-card">
-                <img src="images/pants1.jpeg" 
-                     srcset="images/pants1.jpeg 800w" 
-                     sizes="(max-width: 389px) 100vw, (max-width: 992px) 50vw, 33vw"
-                     alt="Tailored Suit Pants">
-                <h3>WhiteTailored</h3>
-                <p class="price">R299.99</p>
-                <div class="sizes">
-                  <input type="radio" id="sp1-s" name="sp1"><label for="sp1-s">S</label>
-                  <input type="radio" id="sp1-m" name="sp1"><label for="sp1-m">M</label>
-                  <input type="radio" id="sp1-l" name="sp1"><label for="sp1-l">L</label>
-                  <input type="radio" id="sp1-xl" name="sp1"><label for="sp1-xl">XL</label>
-                </div>
-                <button class="add-to-cart-btn">Add to Cart</button>
-              </div>
-              <div class="product-card">
-                <img src="images/pants2.jpeg" 
-                     srcset="images/pants2.jpeg 800w" 
-                     sizes="(max-width: 389px) 100vw, (max-width: 992px) 50vw, 33vw"
-                     alt="Wide Leg Pants">
-                <h3>Black Wide Leg</h3>
-                <p class="price">R299.99</p>
-                <div class="sizes">
-                  <input type="radio" id="sp2-s" name="sp2"><label for="sp2-s">S</label>
-                  <input type="radio" id="sp2-m" name="sp2"><label for="sp2-m">M</label>
-                  <input type="radio" id="sp2-l" name="sp2"><label for="sp2-l">L</label>
-                  <input type="radio" id="sp2-xl" name="sp2"><label for="sp2-xl">XL</label>
-                </div>
-                <button class="add-to-cart-btn">Add to Cart</button>
-              </div>
-              <div class="product-card">
-                <img src="images/pants3.jpeg" 
-                     srcset="images/pants3.jpeg 800w" 
-                     sizes="(max-width: 389px) 100vw, (max-width: 992px) 50vw, 33vw"
-                     alt="Straight Cut Pants">
-                <h3>Straight Cut</h3>
-                <p class="price">R299.99</p>
-                <div class="sizes">
-                  <input type="radio" id="sp3-s" name="sp3"><label for="sp3-s">S</label>
-                  <input type="radio" id="sp3-m" name="sp3"><label for="sp3-m">M</label>
-                  <input type="radio" id="sp3-l" name="sp3"><label for="sp3-l">L</label>
-                  <input type="radio" id="sp3-xl" name="sp3"><label for="sp3-xl">XL</label>
-                </div>
-                <button class="add-to-cart-btn">Add to Cart</button>
-              </div>
-            </div>
-
-            <h3>Bags</h3>
-            
-            <h4>Tote Bags</h4>
-            <div class="products-grid">
-              <div class="product-card">
-                <img src="images/tote-bag1.jpeg" 
-                     srcset="images/tote-bag1.jpeg 800w" 
-                     sizes="(max-width: 389px) 100vw, (max-width: 992px) 50vw, 33vw"
-                     alt="Leather Tote Bag">
-                <h3>Pink Leather Tote Bag</h3>
-                <p class="price">R259.99</p>
-                <div class="sizes">
-                  <input type="radio" id="tb1-s" name="tb1"><label for="tb1-s">One Size</label>
-                </div>
-                <button class="add-to-cart-btn">Add to Cart</button>
-              </div>
-              <div class="product-card">
-                <img src="images/tote-bag2.jpeg" 
-                     srcset="images/tote-bag2.jpeg 800w" 
-                     sizes="(max-width: 389px) 100vw, (max-width: 992px) 50vw, 33vw"
-                     alt="Canvas Tote Bag">
-                <h3>BlackTote Bag</h3>
-                <p class="price">R259.99</p>
-                <div class="sizes">
-                  <input type="radio" id="tb2-s" name="tb2"><label for="tb2-s">One Size</label>
-                </div>
-                <button class="add-to-cart-btn">Add to Cart</button>
-              </div>
-              <div class="product-card">
-                <img src="images/tote-bag3.jpeg" 
-                     srcset="images/tote-bag3.jpeg 800w" 
-                     sizes="(max-width: 389px) 100vw, (max-width: 992px) 50vw, 33vw"
-                     alt="Minimalist Tote">
-                <h3>Minimalist Tote</h3>
-                <p class="price">R259.99</p>
-                <div class="sizes">
-                  <input type="radio" id="tb3-s" name="tb3"><label for="tb3-s">One Size</label>
-                </div>
-                <button class="add-to-cart-btn">Add to Cart</button>
-              </div>
-            </div>
-
-            <h4>Top Handle Bags</h4>
-            <div class="products-grid">
-              <div class="product-card">
-                <img src="images/top-handle2.jpeg" 
-                     srcset="images/top-handle2.jpeg 800w" 
-                     sizes="(max-width: 389px) 100vw, (max-width: 992px) 50vw, 33vw"
-                     alt="Structured Top Handle">
-                <h3>Structured Top Handle</h3>
-                <p class="price">R199.99</p>
-                <div class="sizes">
-                  <input type="radio" id="th1-s" name="th1"><label for="th1-s">One Size</label>
-                </div>
-                <button class="add-to-cart-btn">Add to Cart</button>
-              </div>
-              <div class="product-card">
-                <img src="images/top-handle1.jpeg" 
-                     srcset="images/top-handle1.jpeg 800w" 
-                     sizes="(max-width: 389px) 100vw, (max-width: 992px) 50vw, 33vw"
-                     alt="Elegant Top Handle">
-                <h3>Elegant Top Handle</h3>
-                <p class="price">R199.99</p>
-                <div class="sizes">
-                  <input type="radio" id="th2-s" name="th2"><label for="th2-s">One Size</label>
-                </div>
-                <button class="add-to-cart-btn">Add to Cart</button>
-              </div>
-              <div class="product-card">
-                <img src="images/top-handle3.jpeg" 
-                     srcset="images/top-handle3.jpeg 800w" 
-                     sizes="(max-width: 389px) 100vw, (max-width: 992px) 50vw, 33vw"
-                     alt="Classic Top Handle">
-                <h3>Classic Top Handle</h3>
-                <p class="price">R159.99</p>
-                <div class="sizes">
-                  <input type="radio" id="th3-s" name="th3"><label for="th3-s">One Size</label>
-                </div>
-                <button class="add-to-cart-btn">Add to Cart</button>
-              </div>
-            </div>
-
-            <h4>Shoulder Bags</h4>
-            <div class="products-grid">
-              <div class="product-card">
-                <img src="images/shoulder-bag1.jpeg" 
-                     srcset="images/shoulder-bag1.jpeg 800w" 
-                     sizes="(max-width: 389px) 100vw, (max-width: 992px) 50vw, 33vw"
-                     alt="Crossbody Shoulder Bag">
-                <h3>Golden Shoulder Bag</h3>
-                <p class="price">R159.99</p>
-                <div class="sizes">
-                  <input type="radio" id="sb1-s" name="sb1"><label for="sb1-s">One Size</label>
-                </div>
-                <button class="add-to-cart-btn">Add to Cart</button>
-              </div>
-              <div class="product-card">
-                <img src="images/shoulder-bag2.jpeg" 
-                     srcset="images/shoulder-bag2.jpeg 800w" 
-                     sizes="(max-width: 389px) 100vw, (max-width: 992px) 50vw, 33vw"
-                     alt="Mini Shoulder Bag">
-                <h3>Mini PinkShoulder Bag</h3>
-                <p class="price">R159.99</p>
-                <div class="sizes">
-                  <input type="radio" id="sb2-s" name="sb2"><label for="sb2-s">One Size</label>
-                </div>
-                <button class="add-to-cart-btn">Add to Cart</button>
-              </div>
-              <div class="product-card">
-                <img src="images/shoulder-bag3.jpeg" 
-                     srcset="images/shoulder-bag3.jpeg 800w" 
-                     sizes="(max-width: 389px) 100vw, (max-width: 992px) 50vw, 33vw"
-                     alt="Chain Shoulder Bag">
-                <h3>Chain Shoulder Bag</h3>
-                <p class="price">R159.99</p>
-                <div class="sizes">
-                  <input type="radio" id="sb3-s" name="sb3"><label for="sb3-s">One Size</label>
-                </div>
-                <button class="add-to-cart-btn">Add to Cart</button>
-              </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <p>© 2025 Elegance Reborn. All rights reserved.</p>
-    </footer>
-</body>
->>>>>>> 7eeeaa99f2bd178731b394bf1828fa624d448e80
 </html>
