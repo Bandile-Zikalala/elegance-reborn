@@ -244,7 +244,6 @@ footer {
     }
     nav p { flex-direction: column; gap: 0.6rem; }
     body { font-size: 0.875rem; }
-<<<<<<< HEAD
 }
 /* Search bar styling - matches Elegance Reborn colors */
 #searchBox {
@@ -272,6 +271,4 @@ footer {
     outline: none;
     border-color: #1A1A40; /* navy border on focus */
     box-shadow: 0 0 0 4px rgba(26, 26, 64, 0.1);
-=======
->>>>>>> 7eeeaa99f2bd178731b394bf1828fa624d448e80
 }
