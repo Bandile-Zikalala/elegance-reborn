@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enquiry - Elegance Reborn</title>
+    
+    <!-- Playfair Display Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div>
+                <h1>ELEGANCE REBORN</h1>
+            <p> 
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="products.html">Products</a>
+                <a href="enquiry.html">Enquiry</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="cart.html">Cart (<span id="cartCount">0</span>)</a>
+            </p>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+        <section>
+            <h2>Product & Service Enquiry</h2>
+            <p>Detailed information about our organisation's offerings. Use the form below for product availability, sizing, custom orders, bulk purchases, or general enquiries about Elegance Reborn.</p>
+        </section>
+
+        <section>
+            <h3>Our Offerings</h3>
+            <article>
+                <h4>E-commerce shopping</h4>
+                <p>Browse and purchase curated modest clothing collections online with secure checkout.</p>
+            </article>
+            <article>
+                <h4>Custom Orders</h4>
+                <p>Request specific sizes, colours, or alterations to suit your style and fit requirements.</p>
+            </article>
+            <article>
+                <h4>Style Consultations</h4>
+                <p>Get advice on creating timeless, elegant outfits from our collection.</p>
+            </article>
+            
+            <!-- ENQUIRY FORM - UPDATED -->
+            <h3>Enquiry Form</h3>
+            <form action="https://formsubmit.co/makhububandile441@gmail.com" method="POST" style="background:white; padding:2rem; border-radius:12px; border:2px solid #D4A5A5; max-width:600px; margin:2rem auto;">
+                
+                <label for="name" style="display:block; color:#1A1A40; font-weight:600; margin-top:1rem;">Name:</label>
+                <input type="text" id="name" name="name" required style="width:100%; padding:0.8rem; border:2px solid #D4A5A5; border-radius:8px; font-family: 'Playfair Display', serif; margin-top:0.5rem;">
+
+                <label for="email" style="display:block; color:#1A1A40; font-weight:600; margin-top:1rem;">Email:</label>
+                <input type="email" id="email" name="email" required style="width:100%; padding:0.8rem; border:2px solid #D4A5A5; border-radius:8px; font-family: 'Playfair Display', serif; margin-top:0.5rem;">
+
+                <label for="product-category" style="display:block; color:#1A1A40; font-weight:600; margin-top:1rem;">Product Category:</label>
+                <select id="product-category" name="product-category" style="width:100%; padding:0.8rem; border:2px solid #D4A5A5; border-radius:8px; font-family: 'Playfair Display', serif; margin-top:0.5rem;">
+                    <option>Women's Suit</option>
+                    <option>Women's Outerwear</option>
+                    <option>Women's Bags</option>
+                    <option>Other</option>
+                </select>
+                
+                <label for="enquiry-message" style="display:block; color:#1A1A40; font-weight:600; margin-top:1rem;">Message:</label>
+                <textarea id="enquiry-message" name="message" rows="5" required style="width:100%; padding:0.8rem; border:2px solid #D4A5A5; border-radius:8px; font-family: 'Playfair Display', serif; margin-top:0.5rem;"></textarea>
+
+                <!-- FormSubmit settings -->
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_subject" value="New Enquiry from Elegance Reborn Website">
+                <input type="hidden" name="_next" value="http://localhost:5500/ELEGANCE%20REBORN/thankyou.html">
+
+                <button type="submit" class="add-to-cart-btn" style="margin-top:1.5rem; width:100%;">Send Enquiry</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <hr>
+        <p>&copy; 2026 Elegance Reborn. All rights reserved</p>
+        <hr>
+    </footer>
+
+<script>
+// Update cart count
+function updateCartCount() {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const countEl = document.getElementById('cartCount');
+    if (countEl) countEl.textContent = cart.length;
+}
+updateCartCount();
+</script>
+</body>
+</html>

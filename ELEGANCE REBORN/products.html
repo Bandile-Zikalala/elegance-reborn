@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Elegance Reborn</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Cormorant+Garamond:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>ELEGANCE REBORN</h1>
+            <p>
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="products.html">Products</a>
+                <a href="enquiry.html">Enquiry</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="cart.html">Cart (<span id="cartCount">0</span>)</a>
+            </p>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Our Collections</h2>
+            <p>Curated modest clothing crafted from quality fabrics with classic designs and refined detail.</p>
+            <input type="text" id="searchBox" placeholder="Search blazers, overcoats, suits, bags...">
+        </section>
+
+        <section>
+            <h3>Outerwear</h3>
+
+            <h4>Blazers</h4>
+            <div class="products-grid">
+              <div class="product-card" data-name="Black Tailored Blazer">
+                <img src="images/blazer1.jpeg" alt="Black Tailored Blazer">
+                <h3>Black Tailored Blazer</h3>
+                <p class="price">R450.00</p>
+                <div class="sizes">
+                  <input type="radio" id="p1-xs" name="p1" value="XS" required><label for="p1-xs">XS</label>
+                  <input type="radio" id="p1-s" name="p1" value="S"><label for="p1-s">S</label>
+                  <input type="radio" id="p1-m" name="p1" value="M"><label for="p1-m">M</label>
+                  <input type="radio" id="p1-l" name="p1" value="L"><label for="p1-l">L</label>
+                  <input type="radio" id="p1-xl" name="p1" value="XL"><label for="p1-xl">XL</label>
+                </div>
+                <button class="add-to-cart-btn" data-name="Black Tailored Blazer" data-price="450">Add to Cart</button>
+              </div>
+              
+              <div class="product-card" data-name="Scotch Check Blazer">
+                <img src="images/blazer3.jpeg" alt="Scotch Check Blazer">
+                <h3>Scotch Check Blazer</h3>
+                <p class="price">R450.00</p>
+                <div class="sizes">
+                  <input type="radio" id="p2-xs" name="p2" value="XS" required><label for="p2-xs">XS</label>
+                  <input type="radio" id="p2-s" name="p2" value="S"><label for="p2-s">S</label>
+                  <input type="radio" id="p2-m" name="p2" value="M"><label for="p2-m">M</label>
+                  <input type="radio" id="p2-l" name="p2" value="L"><label for="p2-l">L</label>
+                  <input type="radio" id="p2-xl" name="p2" value="XL"><label for="p2-xl">XL</label>
+                </div>
+                <button class="add-to-cart-btn" data-name="Scotch Check Blazer" data-price="450">Add to Cart</button>
+              </div>
+              
+              <div class="product-card" data-name="Grey Scotch Blazer">
+                <img src="images/blazer4.jpeg" alt="Grey Scotch Blazer">
+                <h3>Grey Scotch Blazer</h3>
+                <p class="price">R450.00</p>
+                <div class="sizes">
+                  <input type="radio" id="p3-xs" name="p3" value="XS" required><label for="p3-xs">XS</label>
+                  <input type="radio" id="p3-s" name="p3" value="S"><label for="p3-s">S</label>
+                  <input type="radio" id="p3-m" name="p3" value="M"><label for="p3-m">M</label>
+                  <input type="radio" id="p3-l" name="p3" value="L"><label for="p3-l">L</label>
+                  <input type="radio" id="p3-xl" name="p3" value="XL"><label for="p3-xl">XL</label>
+                </div>
+                <button class="add-to-cart-btn" data-name="Grey Scotch Blazer" data-price="450">Add to Cart</button>
+              </div>
+            </div>
+
+            <h4>Overcoats</h4>
+            <div class="products-grid">
+              <div class="product-card" data-name="Black Fur Overcoat">
+                <img src="images/over-coat1.jpeg" alt="Black Fur">
+                <h3>Black Fur</h3>
+                <p class="price">R450.00</p>
+                <div class="sizes">
+                  <input type="radio" id="p4-xs" name="p4" value="XS" required><label for="p4-xs">XS</label>
+                  <input type="radio" id="p4-s" name="p4" value="S"><label for="p4-s">S</label>
+                  <input type="radio" id="p4-m" name="p4" value="M"><label for="p4-m">M</label>
+                  <input type="radio" id="p4-l" name="p4" value="L"><label for="p4-l">L</label>
+                  <input type="radio" id="p4-xl" name="p4" value="XL"><label for="p4-xl">XL</label>
+                </div>
+                <button class="add-to-cart-btn" data-name="Black Fur Overcoat" data-price="450">Add to Cart</button>
+              </div>
+              
+              <div class="product-card" data-name="Light Blue Overcoat">
+                <img src="images/over-coat2.jpeg" alt="Light Blue">
+                <h3>Light Blue</h3>
+                <p class="price">R450.00</p>
+                <div class="sizes">
+                  <input type="radio" id="p5-xs" name="p5" value="XS" required><label for="p5-xs">XS</label>
+                  <input type="radio" id="p5-s" name="p5" value="S"><label for="p5-s">S</label>
+                  <input type="radio" id="p5-m" name="p5" value="M"><label for="p5-m">M</label>
+                  <input type="radio" id="p5-l" name="p5" value="L"><label for="p5-l">L</label>
+                  <input type="radio" id="p5-xl" name="p5" value="XL"><label for="p5-xl">XL</label>
+                </div>
+                <button class="add-to-cart-btn" data-name="Light Blue Overcoat" data-price="450">Add to Cart</button>
+              </div>
+              
+              <div class="product-card" data-name="Apricot Overcoat">
+                <img src="images/over-coat3.jpeg" alt="Apricot">
+                <h3>Apricot</h3>
+                <p class="price">R450.00</p>
+                <div class="sizes">
+                  <input type="radio" id="p6-xs" name="p6" value="XS" required><label for="p6-xs">XS</label>
+                  <input type="radio" id="p6-s" name="p6" value="S"><label for="p6-s">S</label>
+                  <input type="radio" id="p6-m" name="p6" value="M"><label for="p6-m">M</label>
+                  <input type="radio" id="p6-l" name="p6" value="L"><label for="p6-l">L</label>
+                  <input type="radio" id="p6-xl" name="p6" value="XL"><label for="p6-xl">XL</label>
+                </div>
+                <button class="add-to-cart-btn" data-name="Apricot Overcoat" data-price="450">Add to Cart</button>
+              </div>
+            </div>
+
+            <h4>Trench Coats</h4>
+            <div class="products-grid">
+              <div class="product-card" data-name="Classic Trench Coat">
+                <img src="images/trench-coat1.jpeg" alt="Classic Trench Coat">
+                <h3>Classic Trench Coat</h3>
+                <p class="price">R450.00</p>
+                <div class="sizes">
+                  <input type="radio" id="p7-xs" name="p7" value="XS" required><label for="p7-xs">XS</label>
+                  <input type="radio" id="p7-s" name="p7" value="S"><label for="p7-s">S</label>
+                  <input type="radio" id="p7-m" name="p7" value="M"><label for="p7-m">M</label>
+                  <input type="radio" id="p7-l" name="p7" value="L"><label for="p7-l">L</label>
+                  <input type="radio" id="p7-xl" name="p7" value="XL"><label for="p7-xl">XL</label>
+                </div>
+                <button class="add-to-cart-btn" data-name="Classic Trench Coat" data-price="450">Add to Cart</button>
+              </div>
+              
+              <div class="product-card" data-name="Grey Trench Coat">
+                <img src="images/trench-coat3.jpeg" alt="Grey Trench Coat">
+                <h3>Grey Trench Coat</h3>
+                <p class="price">R450.00</p>
+                <div class="sizes">
+                  <input type="radio" id="p8-xs" name="p8" value="XS" required><label for="p8-xs">XS</label>
+                  <input type="radio" id="p8-s" name="p8" value="S"><label for="p8-s">S</label>
+                  <input type="radio" id="p8-m" name="p8" value="M"><label for="p8-m">M</label>
+                  <input type="radio" id="p8-l" name="p8" value="L"><label for="p8-l">L</label>
+                  <input type="radio" id="p8-xl" name="p8" value="XL"><label for="p8-xl">XL</label>
+                </div>
+                <button class="add-to-cart-btn" data-name="Grey Trench Coat" data-price="450">Add to Cart</button>
+              </div>
+              
+              <div class="product-card" data-name="Double Breasted Trench">
+                <img src="images/trench-coat2.jpeg" alt="Double Breasted">
+                <h3>Double Breasted</h3>
+                <p class="price">R450.00</p>
+                <div class="sizes">
+                  <input type="radio" id="p9-xs" name="p9" value="XS" required><label for="p9-xs">XS</label>
+                  <input type="radio" id="p9-s" name="p9" value="S"><label for="p9-s">S</label>
+                  <input type="radio" id="p9-m" name="p9" value="M"><label for="p9-m">M</label>
+                  <input type="radio" id="p9-l" name="p9" value="L"><label for="p9-l">L</label>
+                  <input type="radio" id="p9-xl" name="p9" value="XL"><label for="p9-xl">XL</label>
+                </div>
+                <button class="add-to-cart-btn" data-name="Double Breasted Trench" data-price="450">Add to Cart</button>
+              </div>
+            </div>
+
+            <h3>Suits</h3>
+
+            <h4>Lightweight Blazers</h4>
+            <div class="products-grid">
+              <div class="product-card" data-name="Linen Blazer">
+                <img src="images/light-weight1.jpeg" alt="Linen Blazer">
+                <h3>Linen Blazer</h3>
+                <p class="price">R159.99</p>
+                <div class="sizes">
+                  <input type="radio" id="p10-xs" name="p10" value="XS" required><label for="p10-xs">XS</label>
+                  <input type="radio" id="p10-s" name="p10" value="S"><label for="p10-s">S</label>
+                  <input type="radio" id="p10-m" name="p10" value="M"><label for="p10-m">M</label>
+                  <input type="radio" id="p10-l" name="p10" value="L"><label for="p10-l">L</label>
+                  <input type="radio" id="p10-xl" name="p10" value="XL"><label for="p10-xl">XL</label>
+                </div>
+                <button class="add-to-cart-btn" data-name="Linen Blazer" data-price="159.99">Add to Cart</button>
+              </div>
+              
+              <div class="product-card" data-name="Summer Blazer">
+                <img src="images/light-weight2.jpeg" alt="Summer Blazer">
+                <h3>Summer Blazer</h3>
+                <p class="price">R159.99</p>
+                <div class="sizes">
+                  <input type="radio" id="p11-xs" name="p11" value="XS" required><label for="p11-xs">XS</label>
+                  <input type="radio" id="p11-s" name="p11" value="S"><label for="p11-s">S</label>
+                  <input type="radio" id="p11-m" name="p11" value="M"><label for="p11-m">M</label>
+                  <input type="radio" id="p11-l" name="p11" value="L"><label for="p11-l">L</label>
+                  <input type="radio" id="p11-xl" name="p11" value="XL"><label for="p11-xl">XL</label>
+                </div>
+                <button class="add-to-cart-btn" data-name="Summer Blazer" data-price="159.99">Add to Cart</button>
+              </div>
+              
+              <div class="product-card" data-name="Breathable Blazer">
+                <img src="images/light-weight3.jpeg" alt="Breathable Blazer">
+                <h3>Breathable Blazer</h3>
+                <p class="price">R159.99</p>
+                <div class="sizes">
+                  <input type="radio" id="p12-xs" name="p12" value="XS" required><label for="p12-xs">XS</label>
+                  <input type="radio" id="p12-s" name="p12" value="S"><label for="p12-s">S</label>
+                  <input type="radio" id="p12-m" name="p12" value="M"><label for="p12-m">M</label>
+                  <input type="radio" id="p12-l" name="p12" value="L"><label for="p12-l">L</label>
+                  <input type="radio" id="p12-xl" name="p12" value="XL"><label for="p12-xl">XL</label>
+                </div>
+                <button class="add-to-cart-btn" data-name="Breathable Blazer" data-price="159.99">Add to Cart</button>
+              </div>
+            </div>
+
+            <h4>Suit Sets</h4>
+            <div class="products-grid">
+              <div class="product-card" data-name="Burgundy Suit Set">
+                <img src="images/suit1.jpeg" alt="Burgundy Suit Set">
+                <h3>Burgundy Suit Set</h3>
+                <p class="price">R499.99</p>
+                <div class="sizes">
+                  <input type="radio" id="p13-xs" name="p13" value="XS" required><label for="p13-xs">XS</label>
+                  <input type="radio" id="p13-s" name="p13" value="S"><label for="p13-s">S</label>
+                  <input type="radio" id="p13-m" name="p13" value="M"><label for="p13-m">M</label>
+                  <input type="radio" id="p13-l" name="p13" value="L"><label for="p13-l">L</label>
+                  <input type="radio" id="p13-xl" name="p13" value="XL"><label for="p13-xl">XL</label>
+                </div>
+                <button class="add-to-cart-btn" data-name="Burgundy Suit Set" data-price="499.99">Add to Cart</button>
+              </div>
+              
+              <div class="product-card" data-name="Scotch Suit Set">
+                <img src="images/suit2.jpeg" alt="Scotch Suit Set">
+                <h3>Scotch Suit Set</h3>
+                <p class="price">R499.99</p>
+                <div class="sizes">
+                  <input type="radio" id="p14-xs" name="p14" value="XS" required><label for="p14-xs">XS</label>
+                  <input type="radio" id="p14-s" name="p14" value="S"><label for="p14-s">S</label>
+                  <input type="radio" id="p14-m" name="p14" value="M"><label for="p14-m">M</label>
+                  <input type="radio" id="p14-l" name="p14" value="L"><label for="p14-l">L</label>
+                  <input type="radio" id="p14-xl" name="p14" value="XL"><label for="p14-xl">XL</label>
+                </div>
+                <button class="add-to-cart-btn" data-name="Scotch Suit Set" data-price="499.99">Add to Cart</button>
+              </div>
+              
+              <div class="product-card" data-name="Beige Suit Set">
+                <img src="images/suit3.jpeg" alt="Beige Suit Set">
+                <h3>Beige Suit Set</h3>
+                <p class="price">R499.99</p>
+                <div class="sizes">
+                  <input type="radio" id="p15-xs" name="p15" value="XS" required><label for="p15-xs">XS</label>
+                  <input type="radio" id="p15-s" name="p15" value="S"><label for="p15-s">S</label>
+                  <input type="radio" id="p15-m" name="p15" value="M"><label for="p15-m">M</label>
+                  <input type="radio" id="p15-l" name="p15" value="L"><label for="p15-l">L</label>
+                  <input type="radio" id="p15-xl" name="p15" value="XL"><label for="p15-xl">XL</label>
+                </div>
+                <button class="add-to-cart-btn" data-name="Beige Suit Set" data-price="499.99">Add to Cart</button>
+              </div>
+            </div>
+
+            <h4>Suit Pants</h4>
+            <div class="products-grid">
+              <div class="product-card" data-name="White Tailored Pants">
+                <img src="images/pants1.jpeg" alt="White Tailored">
+                <h3>White Tailored</h3>
+                <p class="price">R299.99</p>
+                <div class="sizes">
+                  <input type="radio" id="p16-xs" name="p16" value="XS" required><label for="p16-xs">XS</label>
+                  <input type="radio" id="p16-s" name="p16" value="S"><label for="p16-s">S</label>
+                  <input type="radio" id="p16-m" name="p16" value="M"><label for="p16-m">M</label>
+                  <input type="radio" id="p16-l" name="p16" value="L"><label for="p16-l">L</label>
+                  <input type="radio" id="p16-xl" name="p16" value="XL"><label for="p16-xl">XL</label>
+                </div>
+                <button class="add-to-cart-btn" data-name="White Tailored Pants" data-price="299.99">Add to Cart</button>
+              </div>
+              
+              <div class="product-card" data-name="Black Wide Leg Pants">
+                <img src="images/pants2.jpeg" alt="Black Wide Leg">
+                <h3>Black Wide Leg</h3>
+                <p class="price">R299.99</p>
+                <div class="sizes">
+                  <input type="radio" id="p17-xs" name="p17" value="XS" required><label for="p17-xs">XS</label>
+                  <input type="radio" id="p17-s" name="p17" value="S"><label for="p17-s">S</label>
+                  <input type="radio" id="p17-m" name="p17" value="M"><label for="p17-m">M</label>
+                  <input type="radio" id="p17-l" name="p17" value="L"><label for="p17-l">L</label>
+                  <input type="radio" id="p17-xl" name="p17" value="XL"><label for="p17-xl">XL</label>
+                </div>
+                <button class="add-to-cart-btn" data-name="Black Wide Leg Pants" data-price="299.99">Add to Cart</button>
+              </div>
+              
+              <div class="product-card" data-name="Straight Cut Pants">
+                <img src="images/pants3.jpeg" alt="Straight Cut">
+                <h3>Straight Cut</h3>
+                <p class="price">R299.99</p>
+                <div class="sizes">
+                  <input type="radio" id="p18-xs" name="p18" value="XS" required><label for="p18-xs">XS</label>
+                  <input type="radio" id="p18-s" name="p18" value="S"><label for="p18-s">S</label>
+                  <input type="radio" id="p18-m" name="p18" value="M"><label for="p18-m">M</label>
+                  <input type="radio" id="p18-l" name="p18" value="L"><label for="p18-l">L</label>
+                  <input type="radio" id="p18-xl" name="p18" value="XL"><label for="p18-xl">XL</label>
+                </div>
+                <button class="add-to-cart-btn" data-name="Straight Cut Pants" data-price="299.99">Add to Cart</button>
+              </div>
+            </div>
+
+            <h3>Bags</h3>
+
+            <h4>Tote Bags</h4>
+            <div class="products-grid">
+              <div class="product-card" data-name="Pink Leather Tote Bag">
+                <img src="images/tote-bag1.jpeg" alt="Pink Leather Tote Bag">
+                <h3>Pink Leather Tote Bag</h3>
+                <p class="price">R259.99</p>
+                <div class="sizes">
+                  <input type="radio" id="p19-xs" name="p19" value="XS" required><label for="p19-xs">XS</label>
+                  <input type="radio" id="p19-s" name="p19" value="S"><label for="p19-s">S</label>
+                  <input type="radio" id="p19-m" name="p19" value="M"><label for="p19-m">M</label>
+                  <input type="radio" id="p19-l" name="p19" value="L"><label for="p19-l">L</label>
+                  <input type="radio" id="p19-xl" name="p19" value="XL"><label for="p19-xl">XL</label>
+                </div>
+                <button class="add-to-cart-btn" data-name="Pink Leather Tote Bag" data-price="259.99">Add to Cart</button>
+              </div>
+              
+              <div class="product-card" data-name="Black Tote Bag">
+                <img src="images/tote-bag2.jpeg" alt="Black Tote Bag">
+                <h3>Black Tote Bag</h3>
+                <p class="price">R259.99</p>
+                <div class="sizes">
+                  <input type="radio" id="p20-xs" name="p20" value="XS" required><label for="p20-xs">XS</label>
+                  <input type="radio" id="p20-s" name="p20" value="S"><label for="p20-s">S</label>
+                  <input type="radio" id="p20-m" name="p20" value="M"><label for="p20-m">M</label>
+                  <input type="radio" id="p20-l" name="p20" value="L"><label for="p20-l">L</label>
+                  <input type="radio" id="p20-xl" name="p20" value="XL"><label for="p20-xl">XL</label>
+                </div>
+                <button class="add-to-cart-btn" data-name="Black Tote Bag" data-price="259.99">Add to Cart</button>
+              </div>
+              
+              <div class="product-card" data-name="Minimalist Tote">
+                <img src="images/tote-bag3.jpeg" alt="Minimalist Tote">
+                <h3>Minimalist Tote</h3>
+                <p class="price">R259.99</p>
+                <div class="sizes">
+                  <input type="radio" id="p21-xs" name="p21" value="XS" required><label for="p21-xs">XS</label>
+                  <input type="radio" id="p21-s" name="p21" value="S"><label for="p21-s">S</label>
+                  <input type="radio" id="p21-m" name="p21" value="M"><label for="p21-m">M</label>
+                  <input type="radio" id="p21-l" name="p21" value="L"><label for="p21-l">L</label>
+                  <input type="radio" id="p21-xl" name="p21" value="XL"><label for="p21-xl">XL</label>
+                </div>
+                <button class="add-to-cart-btn" data-name="Minimalist Tote" data-price="259.99">Add to Cart</button>
+              </div>
+            </div>
+
+            <h4>Top Handle Bags</h4>
+            <div class="products-grid">
+              <div class="product-card" data-name="Structured Top Handle">
+                <img src="images/top-handle2.jpeg" alt="Structured Top Handle">
+                <h3>Structured Top Handle</h3>
+                <p class="price">R199.99</p>
+                <div class="sizes">
+                  <input type="radio" id="p22-xs" name="p22" value="XS" required><label for="p22-xs">XS</label>
+                  <input type="radio" id="p22-s" name="p22" value="S"><label for="p22-s">S</label>
+                  <input type="radio" id="p22-m" name="p22" value="M"><label for="p22-m">M</label>
+                  <input type="radio" id="p22-l" name="p22" value="L"><label for="p22-l">L</label>
+                  <input type="radio" id="p22-xl" name="p22" value="XL"><label for="p22-xl">XL</label>
+                </div>
+                <button class="add-to-cart-btn" data-name="Structured Top Handle" data-price="199.99">Add to Cart</button>
+              </div>
+              
+              <div class="product-card" data-name="Elegant Top Handle">
+                <img src="images/top-handle1.jpeg" alt="Elegant Top Handle">
+                <h3>Elegant Top Handle</h3>
+                <p class="price">R199.99</p>
+                <div class="sizes">
+                  <input type="radio" id="p23-xs" name="p23" value="XS" required><label for="p23-xs">XS</label>
+                  <input type="radio" id="p23-s" name="p23" value="S"><label for="p23-s">S</label>
+                  <input type="radio" id="p23-m" name="p23" value="M"><label for="p23-m">M</label>
+                  <input type="radio" id="p23-l" name="p23" value="L"><label for="p23-l">L</label>
+                  <input type="radio" id="p23-xl" name="p23" value="XL"><label for="p23-xl">XL</label>
+                </div>
+                <button class="add-to-cart-btn" data-name="Elegant Top Handle" data-price="199.99">Add to Cart</button>
+              </div>
+              
+              <div class="product-card" data-name="Classic Top Handle">
+                <img src="images/top-handle3.jpeg" alt="Classic Top Handle">
+                <h3>Classic Top Handle</h3>
+                <p class="price">R159.99</p>
+                <div class="sizes">
+                  <input type="radio" id="p24-xs" name="p24" value="XS" required><label for="p24-xs">XS</label>
+                  <input type="radio" id="p24-s" name="p24" value="S"><label for="p24-s">S</label>
+                  <input type="radio" id="p24-m" name="p24" value="M"><label for="p24-m">M</label>
+                  <input type="radio" id="p24-l" name="p24" value="L"><label for="p24-l">L</label>
+                  <input type="radio" id="p24-xl" name="p24" value="XL"><label for="p24-xl">XL</label>
+                </div>
+                <button class="add-to-cart-btn" data-name="Classic Top Handle" data-price="159.99">Add to Cart</button>
+              </div>
+            </div>
+
+            <h4>Shoulder Bags</h4>
+            <div class="products-grid">
+              <div class="product-card" data-name="Golden Shoulder Bag">
+                <img src="images/shoulder-bag1.jpeg" alt="Golden Shoulder Bag">
+                <h3>Golden Shoulder Bag</h3>
+                <p class="price">R159.99</p>
+                <div class="sizes">
+                  <input type="radio" id="p25-xs" name="p25" value="XS" required><label for="p25-xs">XS</label>
+                  <input type="radio" id="p25-s" name="p25" value="S"><label for="p25-s">S</label>
+                  <input type="radio" id="p25-m" name="p25" value="M"><label for="p25-m">M</label>
+                  <input type="radio" id="p25-l" name="p25-l" value="L"><label for="p25-l">L</label>
+                  <input type="radio" id="p25-xl" name="p25" value="XL"><label for="p25-xl">XL</label>
+                </div>
+                <button class="add-to-cart-btn" data-name="Golden Shoulder Bag" data-price="159.99">Add to Cart</button>
+              </div>
+              
+              <div class="product-card" data-name="Mini Pink Shoulder Bag">
+                <img src="images/shoulder-bag2.jpeg" alt="Mini Pink Shoulder Bag">
+                <h3>Mini Pink Shoulder Bag</h3>
+                <p class="price">R159.99</p>
+                <div class="sizes">
+                  <input type="radio" id="p26-xs" name="p26" value="XS" required><label for="p26-xs">XS</label>
+                  <input type="radio" id="p26-s" name="p26" value="S"><label for="p26-s">S</label>
+                  <input type="radio" id="p26-m" name="p26" value="M"><label for="p26-m">M</label>
+                  <input type="radio" id="p26-l" name="p26" value="L"><label for="p26-l">L</label>
+                  <input type="radio" id="p26-xl" name="p26" value="XL"><label for="p26-xl">XL</label>
+                </div>
+                <button class="add-to-cart-btn" data-name="Mini Pink Shoulder Bag" data-price="159.99">Add to Cart</button>
+              </div>
+              
+              <div class="product-card" data-name="Chain Shoulder Bag">
+                <img src="images/shoulder-bag3.jpeg" alt="Chain Shoulder Bag">
+                <h3>Chain Shoulder Bag</h3>
+                <p class="price">R159.99</p>
+                <div class="sizes">
+                  <input type="radio" id="p27-xs" name="p27" value="XS" required><label for="p27-xs">XS</label>
+                  <input type="radio" id="p27-s" name="p27" value="S"><label for="p27-s">S</label>
+                  <input type="radio" id="p27-m" name="p27" value="M"><label for="p27-m">M</label>
+                  <input type="radio" id="p27-l" name="p27" value="L"><label for="p27-l">L</label>
+                  <input type="radio" id="p27-xl" name="p27" value="XL"><label for="p27-xl">XL</label>
+                </div>
+                <button class="add-to-cart-btn" data-name="Chain Shoulder Bag" data-price="159.99">Add to Cart</button>
+              </div>
+       
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Elegance Reborn. All rights reserved.</p>
+    </footer>
+
+<script>
+function updateCartCount() {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const countEl = document.getElementById('cartCount');
+    if (countEl) countEl.textContent = cart.length;
+}
+
+// Run this as soon as page loads
+updateCartCount();
+
+document.querySelectorAll('.add-to-cart-btn').forEach(button => {
+    button.addEventListener('click', function() {
+        const card = this.closest('.product-card');
+        const name = this.dataset.name;
+        const price = parseFloat(this.dataset.price);
+        
+        const selectedSize = card.querySelector('input[type="radio"]:checked');
+        
+        if (!selectedSize) {
+            alert('⚠️ Please select a size first: XS, S, M, L, or XL');
+            return;
+        }
+        
+        const size = selectedSize.value;
+        
+        // Get fresh cart, add item, save
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        cart.push({name, price, size});
+        localStorage.setItem('cart', JSON.stringify(cart));
+        
+        // Update the number RIGHT NOW
+        updateCartCount();
+        
+        alert('✅ Added to cart!\n' + name + '\nSize: ' + size + '\nR' + price.toFixed(2));
+    });
+});
+
+// Your search code stays here unchanged...
+const searchInput = document.getElementById('searchBox');
+searchInput.addEventListener('input', function() {
+    const searchTerm = this.value.toLowerCase().trim();
+    const grids = document.querySelectorAll('.products-grid');
+    
+    grids.forEach(function(grid) {
+        const cards = grid.querySelectorAll('.product-card');
+        let visibleCount = 0;
+        
+        cards.forEach(function(card) {
+            const productName = card.dataset.name.toLowerCase();
+            if (searchTerm === '' || productName.includes(searchTerm)) {
+                card.style.display = 'flex';
+                visibleCount++;
+            } else {
+                card.style.display = 'none';
+            }
+        });
+        
+        const heading = grid.previousElementSibling;
+        if (visibleCount === 0 && searchTerm !== '') {
+            grid.style.display = 'none';
+            if (heading && heading.tagName === 'H4') heading.style.display = 'none';
+        } else {
+            grid.style.display = 'grid';
+            if (heading && heading.tagName === 'H4') heading.style.display = 'block';
+        }
+    });
+});
+</script>
+</body>
+</html>
