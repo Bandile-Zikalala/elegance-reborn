@@ -1,4 +1,3 @@
-<script>
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
 function updateCartCount() {
@@ -32,5 +31,24 @@ document.querySelectorAll('.add-to-cart-btn').forEach(button => {
 
 updateCartCount();
 
-// Your search code stays here unchanged...
-</script>
+// PRODUCT SEARCH - matches your id="searchBox" from products.html
+const searchBox = document.getElementById('searchBox');
+const productCards = document.querySelectorAll('.product-card');
+
+if (searchBox) {
+    searchBox.addEventListener('input', function() {
+        const searchTerm = this.value.toLowerCase().trim();
+        
+        productCards.forEach(card => {
+            const productName = card.dataset.name.toLowerCase();
+            const productTitle = card.querySelector('h3').textContent.toLowerCase();
+            
+            // Show card if search matches name OR title OR search is empty
+            if (productName.includes(searchTerm) || productTitle.includes(searchTerm) || searchTerm === '') {
+                card.style.display = 'block'; // Show - grid auto-fills gaps
+            } else {
+                card.style.display = 'none'; // Hide completely - no blank space
+            }
+        });
+    });
+}
